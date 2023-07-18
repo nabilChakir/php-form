@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Entertainment Booking Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="testbox">
+        <form action="./form.php" method="POST" enctype="multipart/form-data">
+            <div class="banner">
+                <h1>Entertainment Booking Form</h1>
+            </div>
+            <div class="item">
+                <p>Date of Event</p>
+                <input type="date" name="bdate" value=""><label class="errors" for="bdate" id="label_bdate" style="display: none">Bdate field is not correct! Please try again</label>
+                <i class="fas fa-calendar-alt"></i>
+            </div>
+            <div class="item">
+                <p>Time of Event</p>
+                <input type="time" name="event" value=""><label class="errors" for="event" id="label_event" style="display: none">Event field is not correct! Please try again</label>
+                <i class="fas fa-clock"></i>
+            </div>
+            <div class="item">
+                <p>Select Artist</p>
+                <select name="artist">
+                    <option value="">*Please select*</option>
+                    <option value="1">Artist 1</option>
+                    <option value="2">Artist 2</option>
+                    <option value="3">Artist 3</option>
+                    <option value="4">Artist 4</option>
+                </select><label class="errors" for="artist" id="label_artist" style="display: none">Artist field is not
+                    correct! Please try again</label>
+            </div>
+            <div class="item">
+                <p>Description of Event</p>
+                <textarea rows="3" name="description"></textarea><label class="errors" for="description" id="label_description" style="display: none">Description field is not correct! Please try
+                    again</label>
+            </div>
+            <div class="item">
+                <p>Promoter's Name</p>
+                <input type="text" name="promo" value=""><label class="errors" for="promo" id="label_promo" style="display: none">Promo field is not correct! Please try again</label>
+            </div>
+            <div class="item">
+                <p>Venue Name</p>
+                <input type="text" name="venue_name" value=""><label class="errors" for="venue_name" id="label_venue_name" style="display: none">Venue_name field is not correct! Please try again</label>
+            </div>
+            <div class="item">
+                <p>Venue Address</p>
+                <input type="text" name="venue_address_1" placeholder="Street address" value=""><label class="errors" for="venue_address_1" id="label_venue_address_1" style="display: none">Venue_address_1 field is not
+                    correct! Please try again</label>
+                <br><br>
+                <input type="text" name="venue_address_2" placeholder="Street address line 2" value=""><label class="errors" for="venue_address_2" id="label_venue_address_2" style="display: none">Venue_address_2 field is not
+                    correct! Please try again</label>
+                <br><br>
+                <div class="city-item">
+                    <input type="text" name="city" placeholder="City" value=""><label class="errors" for="city" id="label_city" style="display: none">City field is not correct! Please try again</label>
+                    <input type="text" name="region" placeholder="Region" value=""><label class="errors" for="region" id="label_region" style="display: none">Region field is not correct! Please try again</label>
+                    <input type="text" name="postal" placeholder="Postal / Zip code" value=""><label class="errors" for="postal" id="label_postal" style="display: none">Postal field is not correct! Please try again</label>
+                    <select name="country">
+                        <option value="">Country</option>
+                        <option value="1">Russia</option>
+                        <option value="2">Germany</option>
+                        <option value="3">France</option>
+                        <option value="4">Armenia</option>
+                        <option value="5">USA</option>
+                    </select><label class="errors" for="country" id="label_country" style="display: none">Country field
+                        is not correct! Please try again</label>
+                </div>
+            </div>
+            <div class="item">
+                <p>Venue Capacity</p>
+                <input type="text" name="capacity" value=""><label class="errors" for="capacity" id="label_capacity" style="display: none">Capacity field is not correct! Please try again</label>
+            </div>
+            <div class="item">
+                <p>Expected Attendance</p>
+                <input type="text" name="attendance" value=""><label class="errors" for="attendance" id="label_attendance" style="display: none">Attendance field is not correct! Please try again</label>
+            </div>
+            <div class="item">
+                <p>Type of Performance</p>
+                <select name="performance">
+                    <option value="">*Please select*</option>
+                    <option value="1">Solo Performance</option>
+                    <option value="2">Full Band</option>
+                </select><label class="errors" for="performance" id="label_performance" style="display: none">Performance field is not correct! Please try again</label>
+            </div>
+            <div class="item">
+                <p>Set Time (in minutes)</p>
+                <input type="text" name="time" value=""><label class="errors" for="time" id="label_time" style="display: none">Time field is not correct! Please try again</label>
+            </div>
+            <div class="item">
+                <p>Contact Person</p>
+                <div class="name-item">
+                    <input type="text" name="contact_firstname" placeholder="First" value=""><label class="errors" for="contact_firstname" id="label_contact_firstname" style="display: none">Contact_firstname
+                        field is not correct! Please try again</label>
+                    <input type="text" name="contact_lastname" placeholder="Last" value=""><label class="errors" for="contact_lastname" id="label_contact_lastname" style="display: none">Contact_lastname field
+                        is not correct! Please try again</label>
+                </div>
+            </div>
+            <div class="item">
+                <p>Contact Email</p>
+                <input type="text" name="email" value=""><label class="errors" for="email" id="label_email" style="display: none">Email field is not correct! Please try again</label>
+            </div>
+            <div class="item">
+                <p>Contact Number</p>
+                <input type="text" name="number" value=""><label class="errors" for="number" id="label_number" style="display: none">Number field is not correct! Please try again</label>
+            </div>
+            <div class="question">
+                <p>Will this event be recorded?</p>
+                <div class="question-answer">
+                    <div>
+                        <input type="radio" value="yes" id="radio_1" name="recorded">
+                        <label for="radio_1" class="radio"><span>Yes</span></label>
+                    </div>
+                    <div>
+                        <input type="radio" value="no" id="radio_2" name="recorded">
+                        <label for="radio_2" class="radio"><span>No</span></label>
+                    </div>
+                </div>
+                <label class="errors" for="recorded" id="label_recorded" style="display: none">Recorded field is not
+                    correct! Please try again</label>
+            </div>
+            <div class="btn-block">
+                <input type="file" name="fileToUpload" id="fileToUpload" value=""><label class="errors" for="fileToUpload" id="label_fileToUpload" style="display: none">FileToUpload field is not correct or file name already used 
+                    or mismatching with expected formats (jpeg | jpg | ico | png) ! Please try again</label>
+            </div>
+            <div class="btn-block">
+                <button type="submit" href="/" name="submit">SEND</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
